@@ -1,13 +1,22 @@
 {
   "name": "xtime",
   "version": "1.0.0",
-  "description": "",
+  "description": "A small npm package to get a date as a string.",
   "main": "src/index.js",
   "bin": "src/index.js",
   "scripts": {
     "test": "node src/index.test.js",
     "prepublish": "npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberHD1811/xtime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CyberHD1811/xtime/issues"
+  },
+  "homepage": "https://github.com/CyberHD1811/xtime#readme",
+  "keywords": ["time", "date"],
   "author": "CyberHD1811",
   "license": "MIT",
   "dependencies": {}
