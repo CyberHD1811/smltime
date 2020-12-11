@@ -1,0 +1,95 @@
+{
+    "days": {
+        "0": "Sunday",
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday"
+    },
+    "months": {
+        "0": {
+            "name": "January",
+            "self": 31,
+            "before": 31,
+            "after": {
+                "leapyear": 29,
+                "default": 28
+            }
+        },
+        "1": {
+            "name": "February",
+            "self": {
+                "leapyear": 29,
+                "default": 28
+            },
+            "before": 31,
+            "after": 31
+        },
+        "2": {
+            "name": "March",
+            "self": 31,
+            "before": {
+                "leapyear": 29,
+                "default": 28
+            },
+            "after": 30
+
+        },
+        "3": {
+            "name": "April",
+            "self": 30,
+            "before": 31,
+            "after": 31
+        },
+        "4": {
+            "name": "May",
+            "self": 31,
+            "before": 30,
+            "after": 30
+        },
+        "5": {
+            "name": "June",
+            "self": 30,
+            "before": 31,
+            "after": 31
+        },
+        "6": {
+            "name": "July",
+            "self": 31,
+            "before": 31,
+            "after": 31
+        },
+        "7": {
+            "name": "August",
+            "self": 31,
+            "before": 31,
+            "after": 30
+        },
+        "8": {
+            "name": "September",
+            "self": 30,
+            "before": 31,
+            "after": 31
+        },
+        "9": {
+            "name": "October",
+            "self": 31,
+            "before": 30,
+            "after": 30
+        },
+        "10": {
+            "name": "November",
+            "self": 30,
+            "before": 31,
+            "after": 31
+        },
+        "11": {
+            "name": "December",
+            "self": 31,
+            "before": 30,
+            "after": 31
+        }
+    }
+}
