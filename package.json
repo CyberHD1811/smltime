@@ -1,5 +1,5 @@
 {
-  "name": "xtime",
+  "name": "smltime",
   "version": "1.0.0",
   "description": "A small npm package to get a date as a string.",
   "main": "src/index.js",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CyberHD1811/xtime.git"
+    "url": "git+https://github.com/CyberHD1811/smltime.git"
   },
   "bugs": {
-    "url": "https://github.com/CyberHD1811/xtime/issues"
+    "url": "https://github.com/CyberHD1811/smltime/issues"
   },
-  "homepage": "https://github.com/CyberHD1811/xtime#readme",
+  "homepage": "https://github.com/CyberHD1811/smltime#readme",
   "keywords": ["time", "date"],
   "author": "CyberHD1811",
   "license": "MIT",

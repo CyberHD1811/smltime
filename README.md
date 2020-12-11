@@ -1,4 +1,4 @@
-# XTIME
+# SMLTIME
 
 ---
 
@@ -17,7 +17,7 @@ With this small npm package is it possible go get a date for every timezone. Thi
 ---
 
 ```bash
-$ npm i xtime
+$ npm i smltime
 ```
 
 <br>
@@ -29,7 +29,7 @@ $ npm i xtime
 It returns a string of an (almost) indivual date.
 
 ```js
-const xtime = require('xtime');
+const smltime = require('smltime');
 
 const Options = {
     language: 'EN',
@@ -46,7 +46,7 @@ const additionalOptions = {
     Month: 'letters'
 };
 
-const date = xtime(Options, additionalOptions);
+const date = smltime(Options, additionalOptions);
 
 console.log(date);
 ```

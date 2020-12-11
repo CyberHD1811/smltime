@@ -1,4 +1,4 @@
-const xtime = require('./index.js');
+const smltime = require('./index.js');
 
 const Options = {
     language: 'EN',
@@ -15,6 +15,6 @@ const additionalOptions = {
     Month: 'letters'
 };
 
-const date = xtime(Options, additionalOptions);
+const date = smltime(Options, additionalOptions);
 
 console.log(date);
