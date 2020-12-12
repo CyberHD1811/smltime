@@ -8,7 +8,7 @@
 
 ---
 
-With this small npm package is it possible go get a date for every timezone. This is available in different languages.
+With this small npm package is it possible go get a date for every timezone. This is available in different languages. It returns a string of an (almost) indivual date.
 
 <br>
 
@@ -25,8 +25,6 @@ $ npm i smltime
 ### Usage (Example)
 
 ---
-
-It returns a string of an (almost) indivual date.
 
 ```js
 const smltime = require('smltime');

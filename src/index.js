@@ -27,7 +27,10 @@ module.exports = (Options = {}, additionalOptions = {}) => {
 
     let currentMax = '';
     let fDay = '';
+    let fMilliseconds = '';
+    let fMinutes = '';
     let fMonth = '';
+    let fSeconds = '';
     let lastMax = '';
     let leapYear = false;
     let preDate = '';
@@ -36,13 +39,13 @@ module.exports = (Options = {}, additionalOptions = {}) => {
     let preMonth = '';
     let weekday = '';
 
-    if (!additionalOptions.showDate && additionalOptions.showDate) additionalOptions.showDate = false;
-    if (!additionalOptions.showDays && additionalOptions.showDays) additionalOptions.showDays = false;
-    if (!additionalOptions.showMilliseconds && additionalOptions.showMilliseconds) additionalOptions.showMilliseconds = false;
-    if (!additionalOptions.showLanguage && additionalOptions.showLanguage) additionalOptions.showLanguage = false;
-    if (!additionalOptions.showSeconds && additionalOptions.showSeconds) additionalOptions.showSeconds = true;
-    if (!additionalOptions.showTimezone && additionalOptions.showTimezone) additionalOptions.showTimezone = false;
-    if (!additionalOptions.Month === 'numbers' && !additionalOptions.Month === 'letters') additionalOptions.Month = 'numbers';
+    if ([!additionalOptions.showDate && additionalOptions.showDate] || additionalOptions.showDate === undefined) additionalOptions.showDate = false;
+    if ([!additionalOptions.showDays && additionalOptions.showDays] || additionalOptions.showDays === undefined) additionalOptions.showDays = false;
+    if ([!additionalOptions.showMilliseconds && additionalOptions.showMilliseconds] || additionalOptions.showMilliseconds === undefined) additionalOptions.showMilliseconds = false;
+    if ([!additionalOptions.showLanguage && additionalOptions.showLanguage] || additionalOptions.showLanguage === undefined) additionalOptions.showLanguage = false;
+    if ([!additionalOptions.showSeconds && additionalOptions.showSeconds] || additionalOptions.showSeconds === undefined) additionalOptions.showSeconds = true;
+    if ([!additionalOptions.showTimezone && additionalOptions.showTimezone]  || additionalOptions.showTimezone === undefined) additionalOptions.showTimezone = false;
+    if ([!additionalOptions.Month === 'numbers' && !additionalOptions.Month === 'letters'] || additionalOptions.Month === undefined) additionalOptions.Month = 'numbers';
 
     switch (Options.language) {
         case 'DE':
@@ -222,14 +225,21 @@ module.exports = (Options = {}, additionalOptions = {}) => {
 
     weekday = langPath.days[fDay];
 
+    if (UTCMinutes < 10) fMinutes = `0${UTCMinutes}`;
+    else fMinutes = UTCMinutes;
+    if (UTCSeconds < 10) fSeconds = `0${UTCSeconds}`;
+    else fSeconds = UTCSeconds;
+    if (UTCMilliseconds < 10) fMilliseconds = `0${UTCMilliseconds}`;
+    else fMilliseconds = UTCMilliseconds;
+
     if (additionalOptions.showDays) finalWeekday = `${weekday}, `;
     if (additionalOptions.showDate) finalDate = `${finalWeekday}${finalWeekdate}.${finalMonth}.${finalYear}, `;
-    if (additionalOptions.showMilliseconds) finalMilliseconds = `:${UTCMilliseconds}`;
-    if (additionalOptions.showSeconds) finalSeconds = `:${UTCSeconds}`;
+    if (additionalOptions.showMilliseconds) finalMilliseconds = `:${fMilliseconds}`;
+    if (additionalOptions.showSeconds) finalSeconds = `:${fSeconds}`;
     if (additionalOptions.showLanguage) finalLanguage = `${Options.language}: `;
     if (additionalOptions.showTimezone) finalTimezone = ` ${Options.timezone}.`;
 
-    standartTime = `${finalHours}:${UTCMinutes}`;
+    standartTime = `${finalHours}:${fMinutes}`;
 
     return `${finalLanguage + finalDate + standartTime + finalSeconds + finalMilliseconds + finalTimezone}`;
 };
