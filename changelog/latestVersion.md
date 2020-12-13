@@ -11,7 +11,7 @@
 
 - #### Changelog system:
     - [latestVersion.md](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/latestVersion.md "Latest Version")
-    - Older Version changes in the ["allVersions.md](https://CyberHD1811/smltime/blob/main/changelog/allVersions.md "All Versions") file.
+    - Older Version changes in the ["allVersions.md](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/allVersions.md "All Versions") file.
 
 - #### new language in smltime() function:
     - Spanish
