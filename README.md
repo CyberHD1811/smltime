@@ -60,7 +60,7 @@ console.log(leapyear); //Expected output: true
 
 ---
 
-Click [here](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/latestVersion.md "Latest Version") to view the latest Version or click [here](https://www.github.com/CyberHD1811/smltime/blob/main/changlog/allVersions.md "All Versions") to see all Versions.
+Click [here](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/latestVersion.md "Latest Version") to view the latest Version or click [here](https://github.com/CyberHD1811/smltime/blob/main/changelog/allVersions.md "All Versions") to see all Versions.
 
 <br>
 
