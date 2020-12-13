@@ -39,13 +39,13 @@ module.exports = (Options = {}, additionalOptions = {}) => {
     let preMonth = '';
     let weekday = '';
 
-    if ([!additionalOptions.showDate && additionalOptions.showDate] || additionalOptions.showDate === undefined) additionalOptions.showDate = false;
-    if ([!additionalOptions.showDays && additionalOptions.showDays] || additionalOptions.showDays === undefined) additionalOptions.showDays = false;
-    if ([!additionalOptions.showMilliseconds && additionalOptions.showMilliseconds] || additionalOptions.showMilliseconds === undefined) additionalOptions.showMilliseconds = false;
-    if ([!additionalOptions.showLanguage && additionalOptions.showLanguage] || additionalOptions.showLanguage === undefined) additionalOptions.showLanguage = false;
-    if ([!additionalOptions.showSeconds && additionalOptions.showSeconds] || additionalOptions.showSeconds === undefined) additionalOptions.showSeconds = true;
-    if ([!additionalOptions.showTimezone && additionalOptions.showTimezone]  || additionalOptions.showTimezone === undefined) additionalOptions.showTimezone = false;
-    if ([!additionalOptions.Month === 'numbers' && !additionalOptions.Month === 'letters'] || additionalOptions.Month === undefined) additionalOptions.Month = 'numbers';
+    if (!additionalOptions.showDate === true) additionalOptions.showDate = false;
+    if (!additionalOptions.showDays === true) additionalOptions.showDays = false;
+    if (!additionalOptions.showMilliseconds === true) additionalOptions.showMilliseconds = false;
+    if (!additionalOptions.showLanguage === true) additionalOptions.showLanguage = false;
+    if (!additionalOptions.showSeconds === true) additionalOptions.showSeconds = true;
+    if (!additionalOptions.showTimezone === true) additionalOptions.showTimezone = false;
+    if (!additionalOptions.Month === 'letters') additionalOptions.Month = 'numbers';
 
     switch (Options.language) {
         case 'DE':
