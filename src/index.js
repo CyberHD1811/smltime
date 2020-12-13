@@ -1,4 +1,20 @@
-module.exports = (Options = {}, additionalOptions = {}) => {
+module.exports.leapyear = (year = 0) => {
+
+    let errMsg1 = `"${year}" is not a number.`;
+    let errMsg2 = `"${year}" is not valid year. Don't use numbers below 0.`;
+
+    if (typeof(year) !== 'number') throw new Error(errMsg1);
+    if (year < 0) throw new Error(errMsg2);
+
+    if (year % 4 === 0) {
+        if (year % 100 !== 0) return true;
+        else if (year % 400 === 0) return true;
+        else return false;
+    }
+    else return false;
+};
+
+module.exports.smltime = (Options = {}, additionalOptions = {}) => {
 
     const date = new Date();
     
@@ -50,6 +66,9 @@ module.exports = (Options = {}, additionalOptions = {}) => {
     switch (Options.language) {
         case 'DE':
             langPath = require('./lang/DE/de.json');
+            break;
+        case 'ES':
+            langPath = require('./lang/ES/es.json');
             break;
         default:
             langPath = require('./lang/EN/en.json');
