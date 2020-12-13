@@ -82,13 +82,13 @@ Click [here](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/late
 
 - #### additionalOptions
 
-    - showDate: shows the whole Date (Weekday, Date.Month.Year). (Type: boolean, Default: false)
-    - showDays: shows the Weekday. (Only useful if showDate is true) (Type: boolean, Default: false)
-    - showMilliseconds: shows the milliseconds after the seconds. (Type: boolean, Default: false)
-    - showSeconds: shows the seconds after the minutes. (Type: boolean, Default: true)
-    - showLanguage: shows the defined language as a shortcut at the beginning of the string. (Type: boolean, Default: false)
-    - showTimezone: shows the defined timezone at the end of the string. (Type: boolean, Default: false)
-    - Month: 'letters' or 'numbers' shows Month in letters or as number. (Only useful if showDate is true) (Type: string, Default: 'numbers')
+    - showDate: shows the whole Date.
+    - showDays: shows the Weekday.
+    - showMilliseconds: shows the milliseconds after the seconds.
+    - showSeconds: shows the seconds after the minutes.
+    - showLanguage: shows the defined language as a shortcut at the beginning of the string.
+    - showTimezone: shows the defined timezone at the end of the string.
+    - Month: 'letters' or 'numbers' shows Month in letters or as number.
 
 - #### Attention
 
