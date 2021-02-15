@@ -1,150 +1,110 @@
-# SMLTIME
+# smltime
 
 ---
+
+This is a package to create a custom date string and to check if a FullYear is a leapyear or not.
 
 <br>
 
-### Description
+```ts
+import { leapyear, smltime } from 'smltime';
 
----
+//leapyear function:
+console.log(leapyear(2020)); //Expected output: true
+console.log(leapyear(2021)); //Expected output: false
 
-With this small npm package is it possible go get a date for every timezone. This is available in different languages. It returns a string of an (almost) indivual date.
-There is also a function to check if a year is a leapyear.
-
-<br>
-
-### Installation
-
----
-
-```bash
-$ npm i smltime
-```
-
-<br>
-
-### Usage (Example)
-
----
-
-```js
-const smltime = require('smltime');
-
-const Options = {
-    language: 'EN',
-    timezone: 'GMT'
-};
-
-const additionalOptions = {
-    showDays: true,
+//smltime function:
+const dateString = {
+    firstDay: true,
+    monthName: false,
     showDate: true,
-    showMilliseconds: false,
+    showHours: true,
+    showMiliseconds: true,
+    showMinutes: true,
     showSeconds: true,
-    showLanguage: false,
     showTimezone: true,
-    Month: 'letters'
+    showWeekday: true,
+    timezone: 'UTC'
 };
 
-let number = 2020;
-
-const date = smltime.smltime(Options, additionalOptions);
-const leapyear = smltime.leapyear(number);
-
-console.log(date); //Expected output: 'Weekday, Date.Month(letters).year, Hours:Minutes:Seconds Timezone.' 
-console.log(leapyear); //Expected output: true
+console.log(smltime(dateString)); //Expected output (ONLY an example): 'Monday, 15.02.2021 00:35:07:1001 UTC'
 ```
 
-<br>
+---
 
-### Changelog
+#### Warning:
+
+Version 3.0.0 doesn't have any language support like 2.X.X. Please remember that when you update from previous versions.
+
+You will get an Output of true with the leapyear function, because it uses 0 as default value.
+You will get an TypeError, if the input for the leapyear function is not a number.
+
+You will get an TypeError, if the input for the smltime function is not an object.
+If you don't define any properties in that object, the function will use this object as default: {
+    firstDay = true,
+    monthName = false,
+    showDate = true,
+    showHours = true,
+    showMiliseconds = false,
+    showMinutes = true,
+    showSeconds = true,
+    showTimezone = false,
+    showWeekday = false,
+    timezone = 'UTC'
+}
 
 ---
 
-Click [here](https://www.github.com/CyberHD1811/smltime/blob/main/changelog/latestVersion.md "Latest Version") to view the latest Version or click [here](https://github.com/CyberHD1811/smltime/blob/main/changelog/allVersions.md "All Versions") to see all Versions.
+## Documentation:
 
-<br>
+- #### leapyear(year):
+    - ##### year: A number greater than 0
 
-### Documentation
+- #### smltime(options):
+    - ##### options: An object to customize the output of the function
+        - properties: 
+            - firstDay: boolean
+            - monthName: boolean
+            - showDate: boolean
+            - showHours: boolean
+            - showMiliseconds: boolean
+            - showMinutes: boolean
+            - showSeconds: boolean
+            - showTimezone: boolean
+            - showWeekday: boolean
+            - timezone: string
 
----
+    A list with all possible timezones (if timezone doesn't exist it will use UTC as default):
+    
+    | name | difference |
+    | :---: | :---: |
+    | LINT | UTC+14 |
+    | NZDT | UTC+13 |
+    | ANAT | UTC+12 |
+    | AEDT | UTC+11 |
+    | AEST | UTC+10 |
+    | JST | UTC+9 |
+    | AWST | UTC+8 |
+    | WIB | UTC+7 |
+    | BST | UTC+6 |
+    | UZT | UTC+5 |
+    | GST | UTC+4 |
+    | MSK | UTC+3 |
+    | EET | UTC+2 |
+    | CET | UTC+1 |
+    | GMT | UTC+0 |
+    | UTC | UTC+0 |
+    | CVT | UTC-1 |
+    | GST | UTC-2 |
+    | ART | UTC-3 |
+    | VET | UTC-4 |
+    | EST | UTC-5 |
+    | CST | UTC-6 |
+    | MST | UTC-7 |
+    | PST | UTC-8 |
+    | AKST | UTC-9 |
+    | HST | UTC-10 |
+    | NUT | UTC-11 |
+    | AoE | UTC-12 |
 
-### leapyear()
-- ### Year
-    - An integer between 0 and infinity.
-
-<br>
-
-### smltime()
-- #### Options
-
-    - language: Any shortcut of a language in capital letters, default: 'EN'. (List is below)
-    - timezone: Any timezone with full hours in capital letters, default: 'UTC'.
-
-- #### additionalOptions
-
-    - showDate: shows the whole Date.
-    - showDays: shows the Weekday.
-    - showMilliseconds: shows the milliseconds after the seconds.
-    - showSeconds: shows the seconds after the minutes.
-    - showLanguage: shows the defined language as a shortcut at the beginning of the string.
-    - showTimezone: shows the defined timezone at the end of the string.
-    - Month: 'letters' or 'numbers' shows Month in letters or as number.
-
-- #### Attention
-
-    There is no way to deactivate the hours and minutes. If you could, there would be a way to get an empty string out of the function and this isn't wanted.
-
-<br>
-
-#### Lists
-
----
-
-Object | Property | Type | DefaultValue | OtherValues | Language | Time
-| :---: | :---: | :---: | :---: | :---: | :---: | :---:
-Options | language | String | 'EN' | | German
-| | | | | 'DE' | German
-| | | | | 'ES' | Spanish
-| | timezone | String | 'UTC | | | UTC
-| | | | | 'LINT'| | UTC + 14
-| | | | | 'NZDT' | | UTC + 13
-| | | | | 'ANAT' | | UTC + 12
-| | | | | 'AEDT' | | UTC + 11
-| | | | | 'AEST' | | UTC + 10
-| | | | | 'JST' | | UTC + 9
-| | | | | 'CST' | | UTC + 8
-| | | | | 'WIB' | | UTC + 7
-| | | | | 'BST' | | UTC + 6
-| | | | | 'UZT' | | UTC + 5
-| | | | | 'GST' | | UTC + 4
-| | | | | 'MSK' | | UTC + 3
-| | | | | 'OEZ' | | UTC + 2
-| | | | | 'MEZ' | | UTC + 1
-| | | | | 'GMT' | | UTC + 0
-| | | | | 'CVT' | | UTC - 1
-| | | | | 'GST' | | UTC - 2
-| | | | | 'ART' | | UTC - 3
-| | | | | 'VET' | | UTC - 4
-| | | | | 'EST' | | UTC - 5
-| | | | | 'CST' | | UTC - 6
-| | | | | 'MST' | | UTC - 7
-| | | | | 'PST' | | UTC - 8
-| | | | | 'AKST' | | UTC - 9
-| | | | | 'HST' | | UTC - 10
-| | | | | 'NUT' | | UTC - 11
-| | | | | 'AoE' | | UTC - 12
-| | | | | | | |
-| | | | | | | |
-additionalOptions | Month | String | 'numbers' | 'letters' 
-| | showDate | Boolean | false
-| | showDays | Boolean | false
-| | showLanguage | Boolean | false
-| | showMilliseconds | Boolean | false
-| | showSeconds | Boolean | true
-| | showTimezone | Boolean | false
-
-#### Information
-
----
-
-additionalOptions.Month and additionalOptions.showDays is only necessary if additionalOptions.showDate is true. 
+    Source: [timeanddate.com](https://www.timeanddate.com/time/current-number-time-zones.html)

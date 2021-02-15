@@ -1,2 +1,2 @@
-node_module/
-*.log
+node_modules/
+lib/

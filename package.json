@@ -1,23 +1,30 @@
 {
   "name": "smltime",
-  "version": "2.0.1",
-  "description": "A small npm package for simple date tasks.",
-  "main": "src/index.js",
-  "bin": "src/index.js",
+  "version": "3.0.0",
+  "description": "A small npm package for simple date outputs.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "node src/index.test.js",
-    "prepublish": "npm test"
+    "prepare": "npm run build",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CyberHD1811/smltime.git"
   },
+  "keywords": [
+    "time",
+    "date",
+    "leapyear"
+  ],
+  "author": "CyberHD1811",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/CyberHD1811/smltime/issues"
   },
   "homepage": "https://github.com/CyberHD1811/smltime#readme",
-  "keywords": ["time", "date", "leapyear"],
-  "author": "CyberHD1811",
-  "license": "MIT",
-  "dependencies": {}
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
 }
