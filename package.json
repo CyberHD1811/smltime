@@ -1,6 +1,6 @@
 {
   "name": "smltime",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A small npm package for simple date outputs.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

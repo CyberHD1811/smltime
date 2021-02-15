@@ -6,7 +6,7 @@ const leapyear = (year: number = 0): boolean => {
         if (year % 100 !== 0) return true;
         else {
             if (year % 400 === 0) return true;
-            else return false
+            else return false;
         }
     } else return false;
 };
@@ -173,7 +173,7 @@ const smltime = (options: Options) => {
         else if (month === 9) Max = yearObj[month].self;
         else if (month === 10) Max = yearObj[month].self;
         else if (month === 11) Max = yearObj[month].self;
-        else Max = 30;
+        else Max = 30;*/
 
         hours = preHours - 24;
         if (weekday === 6) weekday = 0;
@@ -318,13 +318,13 @@ const smltime = (options: Options) => {
 export { leapyear, smltime };
 
 const Weekday = {
-    0: "Monday",
-    1: "Tuesday",
-    2: "Wednesday",
-    3: "Thursday",
-    4: "Friday",
-    5: "Saturday",
-    6: "Sunday"
+    0: "Sunday",
+    1: "Monday",
+    2: "Tuesday",
+    3: "Wednesday",
+    4: "Thursday",
+    5: "Friday",
+    6: "Saturday"
 }
 
 const yearObj = {

@@ -41,16 +41,16 @@ You will get an TypeError, if the input for the leapyear function is not a numbe
 
 You will get an TypeError, if the input for the smltime function is not an object.
 If you don't define any properties in that object, the function will use this object as default: {
-    firstDay = true,
-    monthName = false,
-    showDate = true,
-    showHours = true,
-    showMiliseconds = false,
-    showMinutes = true,
-    showSeconds = true,
-    showTimezone = false,
-    showWeekday = false,
-    timezone = 'UTC'
+    firstDay: true,
+    monthName: false,
+    showDate: true,
+    showHours: true,
+    showMiliseconds: false,
+    showMinutes: true,
+    showSeconds: true,
+    showTimezone: false,
+    showWeekday: false,
+    timezone: 'UTC'
 }
 
 ---
