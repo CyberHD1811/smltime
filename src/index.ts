@@ -173,7 +173,7 @@ const smltime = (options: Options) => {
         else if (month === 9) Max = yearObj[month].self;
         else if (month === 10) Max = yearObj[month].self;
         else if (month === 11) Max = yearObj[month].self;
-        else Max = 30;*/
+        else Max = 30;
 
         hours = preHours - 24;
         if (weekday === 6) weekday = 0;
