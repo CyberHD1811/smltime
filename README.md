@@ -6,7 +6,7 @@ This is a package to create a custom date string and to check if a FullYear is a
 
 <br>
 
-```ts
+```js
 import { leapyear, smltime } from 'smltime';
 
 //leapyear function:
