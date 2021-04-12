@@ -7,7 +7,7 @@ This is a package to create a custom date string and to check if a FullYear is a
 <br>
 
 ```js
-import { leapyear, smltime } from 'smltime';
+const { leapyear, smltime } = require('smltime');
 
 //leapyear function:
 console.log(leapyear(2020)); //Expected output: true
@@ -34,7 +34,7 @@ console.log(smltime(dateString)); //Expected output (ONLY an example): 'Monday, 
 
 #### Warning:
 
-Version 3.0.0 doesn't have any language support like 2.X.X. Please remember that when you update from previous versions.
+Version 3.0.0 and above doesn't have any language support like 2.X.X. Please remember that when you update from previous versions.
 
 You will get an Output of true with the leapyear function, because it uses 0 as default value.
 You will get an TypeError, if the input for the leapyear function is not a number.
