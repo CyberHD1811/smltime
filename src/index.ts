@@ -315,7 +315,7 @@ const smltime = (options: Options) => {
     return customDate;
 };
 
-module.exports = { leapyear, smltime };
+export default { leapyear, smltime };
 
 const Weekday = {
     0: "Sunday",
