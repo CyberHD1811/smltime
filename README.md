@@ -1,5 +1,7 @@
 # smltime
 
+# ! This package is _NO_ longer supported. Please do not use it any longer. !
+
 ---
 
 This is a package to create a custom date string and to check if a FullYear is a leapyear or not.
